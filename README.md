@@ -1,5 +1,23 @@
-# mmdvmhost_logmon
-MMDVMHost DMR Log Monitoring/Reporting Service
+# RepeaterManager
+MMDVMHost / HBlink DMR Repeater Management/Monitoring System
+
+### NOTE: This is a *very* early prototype/work in progress! Do not expect everything to work. It's mostly public as a sneak-preview of where I'm headed with this new log aggregation protocol. 
+
+#### Working as planned:
+- mmdvmhost_logmon (proof-of-concept service to generate new "standard-protocol" logs)
+- Fanout to browser clients using Server-sent events (SSE)
+- MQTT-based log transport from repeaters to central server
+
+#### Not Fully Implemented:
+- Call Log / System Log Persistent Storage (60%)
+- Web UI for viewing historical & streaming call statistics/system data (10%)
+
+#### Not Started Yet:
+- Websocket-based live call data to browsers (for ~browsers~ _Edge_ that don't support SSE)
+- Raw TCP Log Transport
+
+
+### Notes from some of my e-mails on the DVSwitch mailing list:
 
 Maybe we can start to settle on a standard format for the new logging mechanism. The MMDVMHost monitoring utility I wrote last week monitors either a log file or the systemd journal (I'm using the journal for all our logs, no more plain files) and sends out state information. Here's what the format looks like right now:
 
