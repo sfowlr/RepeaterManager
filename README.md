@@ -11,6 +11,7 @@ MMDVMHost / HBlink DMR Repeater Management/Monitoring System
 #### Not Fully Implemented:
 - Call Log / System Log Persistent Storage (60%)
 - Web UI for viewing historical & streaming call statistics/system data (10%)
+- Direct support for HBlink, without use of MMDVMHost + mmdvmhost_logmon (5%)
 
 #### Not Started Yet:
 - Websocket-based live call data to browsers (for ~browsers~ _Edge_ that don't support SSE)
